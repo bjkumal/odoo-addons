@@ -1,6 +1,7 @@
 # Copyright NuoBiT Solutions, S.L. (<https://www.nuobit.com>)
 # Frank Cespedes <fcespedes@nuobit.com>
 # Eric Antones <eantones@nuobit.com>
+# Copyright 2025 NuoBiT - Deniz Gallo <dgallo@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 from odoo import _, api, fields, models
@@ -29,7 +30,7 @@ class Stage(models.Model):
                 .search([("stage_id", "=", rec.id)])
             )
             if rec.is_lost:
-                leads_non_lost = leads.filtered(lambda l: l.active)
+                leads_non_lost = leads.filtered(lambda lead: lead.active)
                 if leads_non_lost:
                     raise ValidationError(
                         _(
@@ -39,7 +40,7 @@ class Stage(models.Model):
                         )
                     )
             else:
-                leads_lost = leads.filtered(lambda l: not l.active)
+                leads_lost = leads.filtered(lambda lead: not lead.active)
                 if leads_lost:
                     raise ValidationError(
                         _(
