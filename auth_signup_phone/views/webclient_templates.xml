@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright NuoBiT Solutions - Frank Cespedes <fcespedes@nuobit.com>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).-->
+<odoo>
+    <template id="login" inherit_id="web.login" priority="100">
+        <xpath expr="//label[@for='login']" position="replace">
+            <label for="login">Email / Mobile</label>
+        </xpath>
+    </template>
+</odoo>
