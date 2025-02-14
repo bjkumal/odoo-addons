@@ -1,5 +1,6 @@
 # Copyright NuoBiT Solutions, S.L. (<https://www.nuobit.com>)
 # Eric Antones <eantones@nuobit.com>
+# Bijaya Kumal <bkumal@nuobit.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl)
 
 {
@@ -8,7 +9,7 @@
     "the current one on partner creation",
     "version": "17.0.1.0.0",
     "category": "Contacts",
-    "author": "NuoBiT Solutions, S.L.",
+    "author": "NuoBiT Solutions SL",
     "website": "https://github.com/NuoBiT/odoo-addons",
     "license": "AGPL-3",
     "depends": [
